@@ -1,0 +1,8 @@
+
+When doing "apm install", the dependency ""spellchecker": "^3.4.4"" wasn't correctly installing.
+
+I pulled <user>\AppData\Local\atom\app-1.28.0\resources\app.asar.unpacked\node_modules\spellchecker
+
+and placed it in <user>\.atom\packages\my-spell-check\node_modules\
+
+then did the install, which worked.
