@@ -75,12 +75,13 @@ module.exports =
       # because a direct reference to @contextMenuEntries wasn't updating
       # properly between different SpellCheckView's.
       spellCheckView = new SpellCheckView(editor, this, manager)
-
+      spellCheckView.unsubscribeFromBuffer()
+	  
       # save the {editor} into a map
       editorId = editor.id
       spellCheckViews[editorId] =
         view: spellCheckView
-        active: true
+        active: false
         editor: editor
 
       # Make sure that the view is cleaned up on editor destruction.
